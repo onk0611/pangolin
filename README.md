@@ -1,10 +1,10 @@
-# 💻 - MEAN stack project
+# 💻 ∘ MEAN stack project
 
 ### ∘ Login / Register & Logout (Auth System) ⇒ 💻
 ### ∘ Display / Edit User Role (Create Role System) ⇒ ❌
 ### ∘ Add / Remove Friend (Friend Request Management) ⇒ ❌
 
-# 💻 - States project
+# 💻 ∘ project status
 
 ### ✅ ∘ Finished
 ### ❌ ∘ not started yet
