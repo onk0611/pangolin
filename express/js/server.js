@@ -7,6 +7,7 @@ const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+
 const app = express();
 
 // get env variables
@@ -21,7 +22,12 @@ app.use(express.json());
 
 // test frontend
 app.get('/', (req, res) => {
-    res.send('http://' + dns + ':' + port + '/');
+    res.send('server running <a href="http://' + url + ':' + port + '/">HERE</a>');
+})
+
+app.get('/api', (req, res) => {
+    console.log('request send from front');
+    res.json({msg: 'request send from back'})
 })
 
 // console log with server status, dns & port for express & angular server
