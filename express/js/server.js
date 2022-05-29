@@ -1,19 +1,22 @@
 // get Database
-require('../db/mongoose')
+const db = require('../config/db');
 
 // import libraries and dependencies
 require('dotenv').config();
 const express = require('express');
-const helmet = require('helmet');
 const cors = require('cors');
-const bodyParser = require('body-parser');
-
+const helmet = require('helmet');
+const res = require('express/lib/response');
 const app = express();
 
 // get env variables
 const url = process.env.HOST_NAME;
 const port = process.env.HOST_PORT;
-var angularPort = 4200;
+const databaseName = process.env.DB_NAME;
+
+// set variables
+let angularPort = 4200;
+let a = '/--------------------------------------/';
 
 // Middleware
 app.use(helmet());
@@ -32,6 +35,6 @@ app.get('/api', (req, res) => {
 
 // console log with server status, dns & port for express & angular server
 app.listen(port , () => {
-    console.log('Server status : start & operationnal \n dns : ' + url + '\n port : ' + port + '\n url : http://' + url + ':' + port + '\n Angular : http://' + url + ':' + angularPort);
+    console.log('\x1b[36m%s\x1b[0m', a + '\n/ Express link : http://' + url + ':' + port + ' /\n/ Angular link : http://' + url + ':' + angularPort + ' /\n' + a);
 })
 

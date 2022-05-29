@@ -1,6 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
 import { UserService } from './services/user.service';
-import { take } from 'rxjs/operators';
 import { Subscription } from 'rxjs';
 
 @Component({
