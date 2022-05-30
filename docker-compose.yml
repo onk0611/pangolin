@@ -12,7 +12,7 @@ services:
   ports:
   - "3000:3000" #specify ports mapping
   environment: 
-  - MONGO_URL=mongodb://database/meanauth # MongoDB server address as environment variable give to backend
+  - MONGO_URL=mongodb://database/pangolin # MongoDB server address as environment variable give to backend
   links:
   - database # link this service to the database service
   depends_on: 
