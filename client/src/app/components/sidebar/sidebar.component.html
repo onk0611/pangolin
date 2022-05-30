@@ -21,7 +21,7 @@
             <div class="following-data">
                 <a [routerLink]="['/following', identity._id, 1]">
                     <span class="label-stats">
-                        Nombre d'amis
+                        Nombre d'amis pangolin
                     </span>
                     <span class="number-stats">
                         {{stats.following}}
@@ -29,15 +29,6 @@
                 </a>
             </div>
 
-            <div class="following-data">
-                <a [routerLink]="['/followers', identity._id, 1]">
-                    <span class="label-stats">
-                        Ils m'ont ajouté
-                    </span>
-                    <span class="number-stats">
-                        {{stats.followed}}
-                    </span>
-                </a>
-            </div>
+            
         </div>
 </div>
