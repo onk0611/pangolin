@@ -12,7 +12,7 @@ export class ErrorComponent implements OnInit {
 
   constructor() {
     this.title = "ERROR 404";
-    this.subtitle = "Not Found";
+    this.subtitle = "Oups .. vous vous êtes perdu ?";
   }
 
   ngOnInit() {

@@ -36,7 +36,7 @@ export class FollowingComponent implements OnInit {
     private _userService: UserService,
     private _followService: FollowService
     ) { 
-        this.title = 'Followed by';
+        this.title = 'Ajouté par ';
         this.url = GLOBAL.url;
         this.identity = this._userService.getIdentity();
         this.token = this._userService.getToken();

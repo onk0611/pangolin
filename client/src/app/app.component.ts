@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, DoCheck{
     private _userService: UserService,
     private titleService: Title
     ){
-        this.title = 'NGSocial';
+        this.title = 'Pangolin';
         this.url = GLOBAL.url;
         this.titleService.setTitle( this.title );
     }

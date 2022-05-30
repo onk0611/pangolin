@@ -16,7 +16,7 @@
         </div>
         <div class="clearfix"></div>
           <div class="pull-left">
-            <p class="name">{{user.name + ' ' + user.surname}}</p>
+            <p class="name">{{user.name}}</p>
             <p class="nick">{{user.nick}}</p>
           </div>
 
@@ -24,7 +24,7 @@
 
           <div class="follow pull-left">
             <button class="btn btn-success" *ngIf="!following && user._id != identity._id" (click)="followUser(user._id)">
-              Follow
+              Ajouter en amis
             </button>
             <button class="btn btn-primary" *ngIf="following"
                             (click)="unfollowUser(user._id)"
@@ -32,10 +32,10 @@
                             (mouseleave)="mouseLeave()"
                             [class.btn-danger]="user._id == followUserOver">
                 <span  *ngIf="user._id == followUserOver; else following">
-                  Stop following
+                  Supprimer
                 </span>
                 <ng-template #following>
-                  Following
+                  Ajouté
                 </ng-template>
             </button>
           </div>
@@ -48,7 +48,7 @@
               <strong>{{stats.following}}</strong>
             </span>
             <span class="label-stats">
-              &nbsp;following
+              &nbsp;pangolin en amis
             </span>
           </a>
         </div>
@@ -59,21 +59,23 @@
               <strong>{{stats.followed}}</strong>
             </span>
             <span class="label-stats">
-              &nbsp;followers
+              &nbsp;pangolin ajouté
             </span>
           </a>
         </div>
 
         <div class="following-data">
-          <a [routerLink]="['/profile', user._id]">
+          <a [routerLink]="['/followers', user._id, 1]">
             <span class="number-stats">
-              <strong>{{stats.publications}}</strong>
+              <strong>Rôle :</strong>
             </span>
             <span class="label-stats">
-              &nbsp;posts
+              &nbsp;{{ user.surname }}
             </span>
           </a>
         </div>
+
+
       </div>
 
     </div>

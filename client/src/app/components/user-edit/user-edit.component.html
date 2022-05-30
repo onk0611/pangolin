@@ -4,33 +4,33 @@
         <h1 class="h1-strong">{{title}}</h1>
 
         <div class="alert alert-success" *ngIf="status == 'success'">
-          Account details updated successfully.
+          Mise à jour avec succés
         </div>
 
         <div class="alert alert-danger" *ngIf="status == 'error'">
-            Error updating account details.
+            Nous n'avons pas réussi à mettre à jour vos données, veuillez réessayer.
         </div>
 
         <div class="col-md-6 form-group">
             <p>
-                <label>Name</label>
+                <label>Prénom</label>
                 <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" required class="form-control"/>
                 <span *ngIf="!name.value && name.touched">
-                    User name is required
+                    Prénom requis
                 </span>
             </p>
             <p>
-                <label>Surname</label>
+                <label>Rôle</label>
                 <input type="text" name="surname" #surname="ngModel" [(ngModel)]="user.surname" required class="form-control"/>
                 <span *ngIf="!surname.value && surname.touched">
-                    User surname is required
+                    Rôle requis
                 </span>
             </p>
             <p>
-                <label>Nickname</label>
+                <label>Nom d'utilisateur</label>
                 <input type="text" name="nick" #nick="ngModel" [(ngModel)]="user.nick" required class="form-control"/>
                 <span *ngIf="!nick.value && nick.touched">
-                    User nickname is required
+                    Nom d'utilisateur requis
                 </span>
             </p>
         </div>
@@ -39,19 +39,15 @@
                 <label>Email</label>
                 <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" required class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
                 <span *ngIf="!email.value && email.touched">
-                    User email is required
+                    Adresse email requis
                 </span>
-            </p>
-            <p>
-                <input type="file" name="file" id="file" class="inputfile" (change)="fileChangeEvent($event)"/>
-                <label for="file">Select an image</label>
             </p>
             <div *ngIf="user.image">
                 <img src="{{url + 'get-image-user/' + user.image }}" class="upload-image" width="100" height="100"/>
             </div>
         </div>
         <div class="col-md-12 form-group">
-            <input type="submit" value="Update" class="btn btn-warning" [disabled]="!userEditForm.form.valid" />
+            <input type="submit" value="Mettre à jour" class="btn btn-warning" [disabled]="!userEditForm.form.valid" />
         </div>
 
         <!--<input type="submit" value="Update" class="btn btn-warning" [disabled]="!userEditForm.form.valid" />-->

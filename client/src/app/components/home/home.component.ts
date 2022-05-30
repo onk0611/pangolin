@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
     
     
   constructor() {
-    this.title = 'NGSOCIAL';
+    this.title = 'PANGOLIN';
   }
 
   ngOnInit() {

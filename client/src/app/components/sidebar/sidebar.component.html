@@ -21,7 +21,7 @@
             <div class="following-data">
                 <a [routerLink]="['/following', identity._id, 1]">
                     <span class="label-stats">
-                        Following
+                        Nombre d'amis
                     </span>
                     <span class="number-stats">
                         {{stats.following}}
@@ -32,58 +32,12 @@
             <div class="following-data">
                 <a [routerLink]="['/followers', identity._id, 1]">
                     <span class="label-stats">
-                        Followers
+                        Ils m'ont ajouté
                     </span>
                     <span class="number-stats">
                         {{stats.followed}}
                     </span>
                 </a>
             </div>
-
-            <div class="following-data">
-                 <a [routerLink]="['/profile', identity._id]" class="username">
-                    <span class="label-stats">
-                        Posts
-                    </span>
-                    <span class="number-stats">
-                        {{stats.publications}}
-                    </span>
-                </a>
-            </div>
         </div>
 </div>
-
-<!--POSTS FORM-->
-
-<div id="new-publication" class="col-lg-4 pull-left panel panel-default">
-    <form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm, $event)" class="col-lg-10 publication-form">
-        <p>
-            <label class="publication-text">¿What are you doing?</label>
-            <textarea name="text" #text="ngModel" [(ngModel)]="publication.text" class="form-control" [disabled]="loading" required></textarea>
-            <span class="warning-text" *ngIf="!text.valid && text.touched">
-                <i>Some text is required</i>
-            </span>
-        </p>
-        <p>
-            <input type="file" name="file" id="file" class="inputfile" (change)="fileChangeEvent($event)" [disabled]="loading"/>
-            <label for="file">Select an image</label>
-        </p>
-
-        <input type="submit" value="Send" class="btn btn-success" [disabled]="!newPubForm.form.valid" [disabled]="loading"/>
-
-    </form>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

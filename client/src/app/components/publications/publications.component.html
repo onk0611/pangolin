@@ -2,10 +2,6 @@
     <img src="../../../assets/images/lg.dual-ring-loader.gif" />
 </div>
 
-<div *ngIf="publications && publications.length == 0" class="col-lg-12 no-publications">
-        This users doesn´t have <i>any</i> post.
-</div>
-
 <div id="publications"  *ngIf="publications && publications.length > 0">
   <div *ngFor="let publication of publications" class="item-publication">
     <div class="panel panel-default">

@@ -4,17 +4,12 @@
             <ul class="nav navbar-nav" *ngIf="identity">
                 <li>
                     <a [routerLink]="['/home']" [routerLinkActive]="['active']">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a [routerLink]="['/timeline']" [routerLinkActive]="['active']">
-                        Timeline
+                        Accueil
                     </a>
                 </li>
                 <li>
                     <a [routerLink]="['/people']" [routerLinkActive]="['active']">
-                        People
+                        Ajouter
                     </a>
                 </li>
                  <li>
@@ -22,24 +17,18 @@
                         Messages
                     </a>
                 </li>
-                <li>
-                    <a [routerLink]="['/chat']" [routerLinkActive]="['active']">
-                        Chat
-                    </a>
-                </li>
-
             </ul>
 
             <!--MENU IF DONT IDENTIFIED-->
             <ul class="nav navbar navbar-nav navbar-right" *ngIf="!identity">
             <li>
                 <a [routerLink]="['/login']" [routerLinkActive]="['active']">
-                    Login
+                    Se connecter
                 </a>
             </li>
             <li>
                 <a [routerLink]="['/register']" [routerLinkActive]="['active']">
-                    Register
+                    S'inscrire
                 </a>
                 </li>
             </ul>
@@ -56,17 +45,17 @@
                     <ul class="dropdown-menu">
                         <li>
                              <a [routerLink]="['/profile/', identity._id]">
-                                My Profile
+                                Mon profil
                             </a>
                         </li>
                         <li>
                             <a [routerLink]="['/account']">
-                                Account Details
+                                Information personnel
                             </a>
                         </li>
                         <li>
                             <a class="pointer" (click)="lougout()">
-                                Close Session
+                                Déconnexion
                             </a>
                         </li>
 

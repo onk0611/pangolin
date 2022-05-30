@@ -1,6 +1,6 @@
 <div class="col-lg-8">
     <div class="people">
-
+        <h2>Ajouter d'autre pangolin</h2>
         <div *ngFor="let user of users" class="item-user">
             <div class="panel panel-default">
               <div class="panel-body">
@@ -26,7 +26,7 @@
                     <button class="btn btn-success" *ngIf="follows.indexOf(user._id) < 0"
                             (click)="followUser(user._id)">
                         <span class="glyphicon glyphicon-plus-sign"></span>
-                        Follow
+                        Ajouter
                     </button>
 
                     <button class="btn btn-primary" *ngIf="follows.indexOf(user._id) >= 0"
@@ -37,12 +37,12 @@
 
                          <span *ngIf="user._id == followUserOver; else following">
                             <span class="glyphicon glyphicon-minus-sign" ></span>
-                            Unfollow
+                            Supprimer
                         </span>
 
                         <ng-template #following>
                             <span class="glyphicon glyphicon-ok-sign"></span>
-                            Following
+                            Amis
                         </ng-template>
 
                     </button>
